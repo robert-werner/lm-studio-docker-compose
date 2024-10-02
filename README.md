@@ -13,4 +13,4 @@
 
 ### Upon startup, the model specified in the MODEL_PATH environment variable is automatically loaded, with a context length of CONTEXT_LENGTH. The model storage is mounted from an external system as a volume.
 
-Detailed analysis (RU): https://dzen.ru/a/ZvgyOPCYbhKH5JRI
+Detailed (RU): https://dzen.ru/a/ZvgyOPCYbhKH5JRI
