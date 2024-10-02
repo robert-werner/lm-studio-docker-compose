@@ -12,3 +12,5 @@
 ### As a result, you get a Docker container running LM Studio in headless mode with the ability to control it via VNC.
 
 ### Upon startup, the model specified in the MODEL_PATH environment variable is automatically loaded, with a context length of CONTEXT_LENGTH. The model storage is mounted from an external system as a volume.
+
+Detailed analysis (RU): https://dzen.ru/a/ZvgyOPCYbhKH5JRI
