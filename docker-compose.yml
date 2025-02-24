@@ -2,20 +2,21 @@ version: '3.8'
 
 services:
   lmstudio:
-    build: .
+    shm_size: '8gb'
+    build: 
+      dockerfile: Dockerfile
+      context: .
+      shm_size: '8gb'
+    devices:
+      - nvidia.com/gpu=all
     container_name: lmstudio
     ports:
       - "1234:1234"
       - "5900:5900"
     volumes:
-      - /root/.cache/lm-studio/models:/root/.cache/lm-studio/models
+      - /root/development/OllamaToGGUF/Output/models:/root/.cache/lm-studio/models
+      - /root/development/OllamaToGGUF/Output:/root/docs
     environment:
       - CONTEXT_LENGTH=32768
-      - MODEL_PATH=bartowski/Codestral-22B-v0.1-GGUF/Codestral-22B-v0.1-Q8_0.gguf
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [gpu]
     command: ["/start_services.sh"]
     restart: always
