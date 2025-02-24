@@ -1,6 +1,6 @@
 FROM nvidia/cuda:12.6.1-cudnn-devel-ubuntu22.04
 
-COPY ./LM_Studio* /data/lms/
+COPY ./LM-Studio* /data/lms/
 COPY ./keyboard /etc/default/keyboard
 COPY ./http-server-config.json /http-server-config.json
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y keyboard-configuration console-setup tzdata dbus x11-utils x11-xserver-utils libgl1-mesa-glx
